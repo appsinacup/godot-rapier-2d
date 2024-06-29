@@ -43,7 +43,10 @@ After installing, go to `Advanced Settings` -> `Physics` -> `2D` or `3D`. Change
 
 # Limitations
 
-- SeparationRayShape2D, ConcavePolygonShape3D, HeightMapShape3D, 3D joints.
+- SeparationRayShape2D missing.
+- SoftBody3D missing.
+- CharacterBody3D missing.
+- ConcavePolygonShape3D, HeightMapShape3D, 3D joints.
 - Web exports.
 - Android exports.
 - Cross platform determinism.

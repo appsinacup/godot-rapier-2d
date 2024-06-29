@@ -12,6 +12,7 @@ config_version=5
 
 config/name="Godot Rapier 2D"
 config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://addons/godot-rapier2d/logo_square_2d.png"
 
 [display]
 

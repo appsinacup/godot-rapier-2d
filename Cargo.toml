@@ -10,7 +10,7 @@ publish = false
 crate-type = ["cdylib"]
 
 [features]
-default = ["single-dim2", "serde-serialize"]
+default = ["single-dim3", "serde-serialize"]
 dim2 = []
 dim3 = []
 single = []

@@ -234,7 +234,7 @@ checksum = "9e05e7e6723e3455f4818c7b26e855439f7546cf617ef669d1adedb8669e5cb9"
 [[package]]
 name = "godot"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "godot-core",
  "godot-macros",
@@ -243,22 +243,27 @@ dependencies = [
 [[package]]
 name = "godot-bindings"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "gdextension-api",
+ "hashbrown",
 ]
 
 [[package]]
 name = "godot-cell"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
+dependencies = [
+ "hashbrown",
+]
 
 [[package]]
 name = "godot-codegen"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "godot-bindings",
+ "hashbrown",
  "heck",
  "nanoserde",
  "proc-macro2",
@@ -269,24 +274,26 @@ dependencies = [
 [[package]]
 name = "godot-core"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "glam",
  "godot-bindings",
  "godot-cell",
  "godot-codegen",
  "godot-ffi",
+ "hashbrown",
  "serde",
 ]
 
 [[package]]
 name = "godot-ffi"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "gensym",
  "godot-bindings",
  "godot-codegen",
+ "hashbrown",
  "libc",
  "paste",
 ]
@@ -294,9 +301,10 @@ dependencies = [
 [[package]]
 name = "godot-macros"
 version = "0.1.1"
-source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#1a59fd720bf2fa1e95d485e378067bdf76b2424b"
+source = "git+https://github.com/ughuuu/gdext?branch=make-stuff-serializable#68da4a37cf0a3d2ccb784b42be494ef97a574846"
 dependencies = [
  "godot-bindings",
+ "hashbrown",
  "proc-macro2",
  "quote",
  "venial",
