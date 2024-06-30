@@ -32,6 +32,13 @@ pub fn register_scene() {
     RapierProjectSettings::register_settings();
 }
 pub fn unregister_server() {
-    // there doesn't seem to be a function to unregister a server.
 }
 pub fn unregister_scene() {}
+pub fn register_editor() {
+    // TODO register documentation
+    //GDExtensionsInterfaceEditorHelpLoadXMLAndLen editor_help_load_xml_from_utf8_chars_and_len = (GDExtensionsInterfaceEditorHelpLoadXMLAndLen)internal::gdextension_interface_get_proc_address("editor_help_load_xml_from_utf8_chars_and_len");
+    //editor_help_load_xml_from_utf8_chars_and_len(_doc_data, _doc_data_size);
+}
+pub fn unregister_editor() {
+    
+}
