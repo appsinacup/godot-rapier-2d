@@ -33,6 +33,7 @@ impl PhysicsEngine {
         }
         ImpulseJointHandle::invalid()
     }
+
     #[cfg(feature = "dim3")]
     pub fn joint_create_revolute(
         &mut self,

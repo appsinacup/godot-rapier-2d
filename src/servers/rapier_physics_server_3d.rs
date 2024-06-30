@@ -506,47 +506,84 @@ impl IPhysicsServer3DExtension for RapierPhysicsServer3D {
     fn joint_clear(&mut self, rid: Rid) {
         self.implementation.joint_clear(rid);
     }
-    fn joint_make_pin(&mut self, joint: Rid, body_A: Rid, local_A: Vector3, body_B: Rid, local_B: Vector3,) {
+
+    fn joint_make_pin(
+        &mut self,
+        joint: Rid,
+        body_A: Rid,
+        local_A: Vector3,
+        body_B: Rid,
+        local_B: Vector3,
+    ) {
         self.implementation
             .joint_make_pin(joint, body_A, local_A, body_B, local_B);
     }
-    fn pin_joint_set_param(&mut self, joint: Rid, param: PinJointParam, value: f32,) {
+
+    fn pin_joint_set_param(&mut self, joint: Rid, param: PinJointParam, value: f32) {
         self.implementation.pin_joint_set_param(joint, param, value);
     }
-    fn pin_joint_get_param(&self, joint: Rid, param: PinJointParam,) -> f32 {
+
+    fn pin_joint_get_param(&self, joint: Rid, param: PinJointParam) -> f32 {
         self.implementation.pin_joint_get_param(joint, param)
     }
-    fn pin_joint_set_local_a(&mut self, joint: Rid, local_A: Vector3,) {
+
+    fn pin_joint_set_local_a(&mut self, joint: Rid, local_A: Vector3) {
         self.implementation.pin_joint_set_local_a(joint, local_A);
     }
-    fn pin_joint_get_local_a(&self, joint: Rid,) -> Vector3 {
+
+    fn pin_joint_get_local_a(&self, joint: Rid) -> Vector3 {
         self.implementation.pin_joint_get_local_a(joint)
     }
-    fn pin_joint_set_local_b(&mut self, joint: Rid, local_B: Vector3,) {
+
+    fn pin_joint_set_local_b(&mut self, joint: Rid, local_B: Vector3) {
         self.implementation.pin_joint_set_local_b(joint, local_B);
     }
-    fn pin_joint_get_local_b(&self, joint: Rid,) -> Vector3 {
+
+    fn pin_joint_get_local_b(&self, joint: Rid) -> Vector3 {
         self.implementation.pin_joint_get_local_b(joint)
     }
-    fn joint_make_hinge(&mut self, joint: Rid, body_A: Rid, hinge_A: Transform3D, body_B: Rid, hinge_B: Transform3D,) {
-        self.implementation.joint_make_hinge(joint, body_A, hinge_A, body_B, hinge_B);
+
+    fn joint_make_hinge(
+        &mut self,
+        joint: Rid,
+        body_A: Rid,
+        hinge_A: Transform3D,
+        body_B: Rid,
+        hinge_B: Transform3D,
+    ) {
+        self.implementation
+            .joint_make_hinge(joint, body_A, hinge_A, body_B, hinge_B);
     }
-    fn joint_make_hinge_simple(&mut self, joint: Rid, body_A: Rid, pivot_A: Vector3, axis_A: Vector3, body_B: Rid, pivot_B: Vector3, axis_B: Vector3,) {
+
+    fn joint_make_hinge_simple(
+        &mut self,
+        joint: Rid,
+        body_A: Rid,
+        pivot_A: Vector3,
+        axis_A: Vector3,
+        body_B: Rid,
+        pivot_B: Vector3,
+        axis_B: Vector3,
+    ) {
         self.implementation
             .joint_make_hinge_simple(joint, body_A, pivot_A, axis_A, body_B, pivot_B, axis_B);
     }
-    fn hinge_joint_set_param(&mut self, joint: Rid, param: HingeJointParam, value: f32,) {
+
+    fn hinge_joint_set_param(&mut self, joint: Rid, param: HingeJointParam, value: f32) {
         self.implementation
             .hinge_joint_set_param(joint, param, value);
     }
-    fn hinge_joint_get_param(&self, joint: Rid, param: HingeJointParam,) -> f32 {
+
+    fn hinge_joint_get_param(&self, joint: Rid, param: HingeJointParam) -> f32 {
         self.implementation.hinge_joint_get_param(joint, param)
     }
-    fn hinge_joint_set_flag(&mut self, joint: Rid, flag: HingeJointFlag, enabled: bool,) {
+
+    fn hinge_joint_set_flag(&mut self, joint: Rid, flag: HingeJointFlag, enabled: bool) {
         self.implementation
             .hinge_joint_set_flag(joint, flag, enabled);
     }
-    fn hinge_joint_get_flag(&self, joint: Rid, flag: HingeJointFlag,) -> bool {
+
+    fn hinge_joint_get_flag(&self, joint: Rid, flag: HingeJointFlag) -> bool {
         self.implementation.hinge_joint_get_flag(joint, flag)
     }
 

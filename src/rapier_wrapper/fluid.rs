@@ -417,7 +417,10 @@ impl PhysicsEngine {
                 .fluids_mut()
                 .get_mut(handle_to_fluid_handle(fluid_handle))
         {
-            physics_world.fluids_pipeline.liquid_world.remove_fluid(handle_to_fluid_handle(fluid_handle));
+            physics_world
+                .fluids_pipeline
+                .liquid_world
+                .remove_fluid(handle_to_fluid_handle(fluid_handle));
         }
     }
 }

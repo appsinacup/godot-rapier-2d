@@ -136,7 +136,6 @@ impl PhysicsEngine {
                         hit_info.normal = hit_normal;
                         hit_info.collider = handle;
                         hit_info.user_data = physics_world.get_collider_user_data(handle);
-                        return false; // We found a collision hit.
                     }
                     true // Continue to search.
                 },
