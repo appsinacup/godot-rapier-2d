@@ -92,8 +92,8 @@ The difference from `Godot Physics Server` is that resources are not using point
 However, there are some things that need to be reconstructed after saving and loading the state, namely:
 - `Callables`
 - `RID`
-- instance_id
-- canvas_instance_id
+- `instance_id`
+- `canvas_instance_id`
 
 As described in the chapter above, the `Physics Server` creates some resources and gives Godot `RID`'s that can be used to access them. Godot also gives some resources to the `Physics Server`, eg. `Callables`, that are used to notify Godot of updates (eg. collision events, etc.). Godot also gives to objects from `Physics Server` instance_id's and canvas_instance_id's in order to identify a node corresponds to a resource.
 
@@ -106,8 +106,7 @@ Godot Rapier Physics also exposes new nodes, [Fluid2D](../src/fluids/fluid_2d.rs
 ## How to build
 
 1. Prerequisites:
-- Install [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
-- [Rust Nightly](https://www.oreilly.com/library/view/rust-programming-by/9781788390637/e07dc768-de29-482e-804b-0274b4bef418.xhtml)
+- [cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html)
 
 2. Update dependencies to latest:
 
@@ -144,14 +143,14 @@ For the correct path to use inside the bin folder, look inside the `bin2d/addons
 ### Available features
 
 For features, the following are available:
-- single-dim2
-- single-dim3
-- double-dim2
-- double-dim3
-- parallel
-- simd-stable
-- enhanced-determinism
-- serde-serialize
+- `single-dim2`
+- `single-dim3`
+- `double-dim2`
+- `double-dim3`
+- `parallel`
+- `simd-stable`
+- `enhanced-determinism`
+- `serde-serialize`
 
 The `single` and `double` refer to the [precision](https://docs.godotengine.org/en/stable/tutorials/physics/large_world_coordinates.html) used in Godot.
 

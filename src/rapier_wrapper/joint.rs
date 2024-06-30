@@ -34,6 +34,38 @@ impl PhysicsEngine {
         ImpulseJointHandle::invalid()
     }
 
+    #[cfg(feature = "dim3")]
+    pub fn joint_create_revolute(
+        &mut self,
+        world_handle: WorldHandle,
+        body_handle_1: RigidBodyHandle,
+        body_handle_2: RigidBodyHandle,
+        anchor_1: Vector<Real>,
+        anchor_2: Vector<Real>,
+        angular_limit_lower: Real,
+        angular_limit_upper: Real,
+        angular_limit_enabled: bool,
+        motor_target_velocity: Real,
+        motor_enabled: bool,
+        disable_collision: bool,
+    ) -> ImpulseJointHandle {
+        if let Some(physics_world) = self.get_mut_world(world_handle) {
+            let mut joint = RevoluteJointBuilder::new()
+                .local_anchor1(Point { coords: anchor_1 })
+                .local_anchor2(Point { coords: anchor_2 })
+                .motor_model(MotorModel::ForceBased)
+                .contacts_enabled(!disable_collision);
+            if angular_limit_enabled {
+                joint = joint.limits([angular_limit_lower, angular_limit_upper]);
+            }
+            if motor_enabled {
+                joint = joint.motor_velocity(motor_target_velocity, 0.0);
+            }
+            return physics_world.insert_joint(body_handle_1, body_handle_2, joint);
+        }
+        ImpulseJointHandle::invalid()
+    }
+
     pub fn joint_change_revolute_params(
         &mut self,
         world_handle: WorldHandle,

@@ -9,7 +9,7 @@
 
 <p align = "center">
     <strong>
-        <a href="https://github.com/appsinacup/godot-rapier-physics/blob/main/docs/DOCUMENTATION.md">Documentation</a> | <a href="https://discord.gg/56dMud8HYn">Discord</a>
+        <a href="https://github.com/appsinacup/godot-rapier-physics/blob/main/docs/DOCUMENTATION.md">Documentation</a> | <a href="https://discord.gg/56dMud8HYn">Discord</a> | <a href="https://github.com/appsinacup/godot-rapier-physics/blob/main/docs/DEMOS.md">Demos</a>
     </strong>
 </p>
 
@@ -41,21 +41,19 @@ After installing, go to `Advanced Settings` -> `Physics` -> `2D` or `3D`. Change
 <img src="docs/rapier-vid.gif"/>
 </p>
 
-# Note
-
-This plugin was recently rewritten from c++ to rust. There are still some things missing from what it had originally and may have some new bugs that it didn't have before.
-
-The reason it was rewritten is to do easier cross platform determinism part and exports to web.
-
 # Limitations
 
-- SeparationRayShape2D, ConcavePolygonShape3D, HeightMapShape3D, 3D joints.
+- SeparationRayShape2D missing.
+- SoftBody3D missing.
+- CharacterBody3D missing.
+- ConcavePolygonShape3D, HeightMapShape3D, 3D joints.
 - Web exports.
 - Android exports.
 - Cross platform determinism.
 - Double builds.
 - Liquids Missing.
 - No support for asymetric collisions (eg. object 1 hitting object 2 but object 2 not hitting object 1).
+- Friction and bounce as works differently than in Godot.
 
 # Platforms
 

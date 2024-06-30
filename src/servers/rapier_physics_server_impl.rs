@@ -1342,6 +1342,92 @@ impl RapierPhysicsServerImpl {
         true
     }
 
+    #[cfg(feature = "dim3")]
+    pub(super) fn joint_make_pin(
+        &mut self,
+        joint: Rid,
+        body_a: Rid,
+        local_a: Vector3,
+        body_b: Rid,
+        local_b: Vector3,
+    ) {
+        return;
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_set_param(&mut self, joint: Rid, param: PinJointParam, value: f32) {}
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_get_param(&self, joint: Rid, param: PinJointParam) -> f32 {
+        return 0.0;
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_set_local_a(&mut self, joint: Rid, local_A: Vector3) {
+        return;
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_get_local_a(&self, joint: Rid) -> Vector3 {
+        return Vector3::new(0.0, 0.0, 0.0);
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_set_local_b(&mut self, joint: Rid, local_B: Vector3) {
+        return;
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn pin_joint_get_local_b(&self, joint: Rid) -> Vector3 {
+        return Vector3::new(0.0, 0.0, 0.0);
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn joint_make_hinge(
+        &mut self,
+        joint: Rid,
+        body_A: Rid,
+        hinge_A: Transform3D,
+        body_B: Rid,
+        hinge_B: Transform3D,
+    ) {
+        unimplemented!()
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn joint_make_hinge_simple(
+        &mut self,
+        joint: Rid,
+        body_A: Rid,
+        pivot_A: Vector3,
+        axis_A: Vector3,
+        body_B: Rid,
+        pivot_B: Vector3,
+        axis_B: Vector3,
+    ) {
+        unimplemented!()
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn hinge_joint_set_param(&mut self, joint: Rid, param: HingeJointParam, value: f32) {
+        unimplemented!()
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn hinge_joint_get_param(&self, joint: Rid, param: HingeJointParam) -> f32 {
+        unimplemented!()
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn hinge_joint_set_flag(&mut self, joint: Rid, flag: HingeJointFlag, enabled: bool) {
+        unimplemented!()
+    }
+
+    #[cfg(feature = "dim3")]
+    pub(super) fn hinge_joint_get_flag(&self, joint: Rid, flag: HingeJointFlag) -> bool {
+        unimplemented!()
+    }
+
     #[cfg(feature = "dim2")]
     pub(super) fn joint_make_pin(&mut self, rid: Rid, anchor: Vector, body_a: Rid, body_b: Rid) {
         let mut joint: Box<dyn IRapierJoint>;

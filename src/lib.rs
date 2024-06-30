@@ -44,6 +44,9 @@ unsafe impl ExtensionLibrary for RapierPhysicsExtensionLibrary {
             InitLevel::Servers => {
                 servers::register_server();
             }
+            InitLevel::Editor => {
+                servers::register_editor();
+            }
             _ => (),
         }
     }
@@ -55,6 +58,9 @@ unsafe impl ExtensionLibrary for RapierPhysicsExtensionLibrary {
             }
             InitLevel::Servers => {
                 servers::unregister_server();
+            }
+            InitLevel::Editor => {
+                servers::unregister_editor();
             }
             _ => (),
         }
